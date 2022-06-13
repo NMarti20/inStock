@@ -1,0 +1,28 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.footer {
+    background-color: $main-bkg;
+    z-index: -10;
+    padding: 2.5rem 1rem;
+    width: 100%;
+    position: absolute;
+   
+    @include tablet {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    padding:15vh 2rem 2.5rem 2rem;
+
+    }
+    @include desktop {
+        padding: 15vh 8.125rem 3rem 8.125rem;
+}
+    &__copyright {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.6875rem;
+        line-height: 1rem;
+        color: #5C667E;
+    }
+}

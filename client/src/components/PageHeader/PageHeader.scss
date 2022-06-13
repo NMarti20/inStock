@@ -1,0 +1,113 @@
+@use '../../partials/_variables' as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/extends" as *;
+
+
+.page-header{
+    background-color: $nav-bkg;
+
+    padding: 1.325rem 1rem 5rem;
+    
+    @include tablet{
+        padding-right:  2rem;
+        padding-left:  2rem;
+        padding-bottom: 7.25rem;
+
+    }
+    @include desktop{
+        padding-bottom: 7.5rem;
+
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+            @include tablet{
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: 1020px;
+                margin: 0 auto;
+            }
+       
+        }
+    &__logo{
+        width: 125px;
+        margin-bottom: 1rem;
+        @include tablet{
+            margin-bottom: 0;
+        }
+    }
+    &__nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            width: auto;
+
+        }
+        @include desktop{
+            
+        }
+    }
+
+
+    &__warehouses-link{
+        @extend .button;
+        font-size: 0.65rem;
+        @include tablet{
+            margin-right: 1rem;
+            font-size: 0.875rem;   
+        }
+        &:hover{
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        &:visited{
+            color: #ffffff;
+        }
+        &:focus{
+            background-color: $primary-text;
+            color: #fff;
+        }
+        
+    }
+    
+    &__inventory-link{
+        @extend .button;
+        font-size: 0.65rem;
+        color: #ffffff;
+        
+        @include tablet{
+            font-size: 0.875rem;
+            padding-right: 1rem;
+        }
+        @include desktop{
+            
+        }
+        &:hover{
+            text-decoration: underline;
+            @include tablet{
+                color: #ffffff;
+            }
+            @include desktop{
+                color: #ffffff;
+
+            }
+        }
+        &:visited{
+            color: #ffffff;
+            font-size: inherit;
+        }
+        // &:link{
+        //     text-decoration: none;
+        // }
+    }
+    &__active-link{
+        background-color: $primary-text;
+        text-decoration: none;
+        color: #fff;
+    }
+
+}

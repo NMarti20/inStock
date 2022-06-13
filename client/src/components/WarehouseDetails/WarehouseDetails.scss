@@ -1,0 +1,245 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.warehouse-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f8f9;
+    position: relative;
+    padding-bottom: 5rem;
+  
+    &__container {
+      position: relative;
+      width: calc(100% - 2rem);
+      background-color: #fff;
+      flex-grow: 1;
+      margin: -4rem 0 0;
+      box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+      border-radius: 3px;
+      @include tablet{
+        width: calc(100% - 4rem);
+  
+        max-width: 1020px;
+        margin: -5.75rem auto;
+      }
+      @include desktop {
+        flex-grow: 0;
+        width: 1020px;
+        margin: -5.75rem auto;
+      }
+    }
+
+
+    &__header{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid $border-color;
+      @include tablet{
+        padding: 2rem 2rem;
+
+
+      }
+      @include desktop{
+
+      }
+
+      &-back-icon{
+        margin-right: 0.5rem;
+
+      }
+      &-name{
+        font-size: 1.3rem;
+        font-weight: 500;
+        @include tablet{
+          font-size: 2rem;
+          margin-right: auto;
+
+        }
+        @include desktop{
+          
+        }
+      }
+      &-iconbox{
+        display: flex;
+        align-items: center;
+        border-radius: 1.25rem;
+        padding: 0.25rem 1rem;
+        background-color: $primary-interact;
+      }
+      &-edit{
+        color: #fff;
+        font-size: 0.875rem;
+        padding:  0;
+
+      }
+      &-edit-icon{
+        margin-left: auto;
+        height: 2.1rem;
+        fill: white;
+        background-color: $primary-interact;
+        border-radius: 50%;
+        padding: 0.4rem 0;
+        padding-right: 0.25rem;
+        
+        @include tablet{
+          flex-grow: 1;
+
+        }
+        @include desktop{
+          
+        }
+
+      }
+
+    
+    }
+
+
+    &__contact-details{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 0.875rem 1rem;
+      border-bottom: 1px solid $border-color;
+      @include tablet{
+        padding: 1.5rem 2rem;
+
+        
+
+      }
+      @include desktop{
+        padding-right: 20%;
+        
+      }
+      
+
+    }
+    &__contact-container{
+      width: calc(50%-0.75rem);
+      margin-right: 1rem;
+      @include tablet{
+        width: 22%;
+        margin-left: 2rem;
+
+      }
+      @include desktop{
+        
+      }
+    }
+    &__first-contact-container{
+      margin-bottom: 1rem;
+      width: 100%;
+      @include tablet{
+        width:40%;
+        margin-bottom: 0;
+        border-right: 1px solid $border-color;
+      }
+      @include desktop{
+        
+      }
+    }
+    &__label{
+      text-transform: uppercase;
+        font-size: 0.525rem;
+        font-weight: 600;
+        color: #5c667e;
+        margin-bottom: 0.5rem;
+        @include tablet {
+          font-size: 0.7rem;
+        }
+    }
+    &__content{
+      font-size: 0.725rem;
+      margin-bottom: 0.25rem;
+      @include tablet{
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+
+      }
+      @include desktop{
+        
+      }
+    }
+
+
+    &__guide {
+        display: none;
+        background-color: $main-bkg;
+        padding: 0.75rem 2rem;
+        @include tablet {
+            width: 100%;
+            
+          display: flex;
+          align-items: center;
+         
+        }
+        @include desktop {
+        
+        }
+      }
+      &__guide-item {
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        width: 20%;
+        color: #5c667e;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+
+        &--inventory {
+          @include tablet{
+            width: 30%;
+
+          }
+         
+        }
+        &--address {
+          @include tablet{
+            width: 30%;
+
+          }
+          @include desktop {
+          }
+        }
+        &--status {
+          @include tablet{
+            width: 30%;
+          }
+          @include desktop {
+            // width: 20%;
+          }
+        }
+        &--contact-info {
+          width: 25%;
+          @include desktop {
+            // width: 20%;
+          }
+        }
+        &--actions {
+          width: 15%;
+          justify-content: flex-end;
+          @include desktop {
+            // width: 10%;
+          }
+        }
+      }
+      &__guide-item-button {
+        background: none;
+        border: none;
+        height: 0.75rem;
+        margin-left: 0.55875rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &__guide-item-button-icon {
+        height: 0.875rem;
+      }
+
+  }

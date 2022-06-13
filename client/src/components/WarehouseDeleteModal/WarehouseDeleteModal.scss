@@ -1,0 +1,141 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/extends' as *;
+.inactive{
+    display: none;
+    
+}
+.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    @include tablet{
+        background-color: rgba(19, 24, 44, 0.7)
+
+    }
+    @include desktop{
+
+    }
+ 
+}
+
+.delete-modal{
+    background-color: $main-bkg;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        width: calc(100vw - 5rem);
+        min-height: 15rem;
+        height:30vh;
+        margin-top: 11rem;
+        padding-left: 3rem;
+    }
+    @include desktop{  
+        width: calc(50vw) 
+    }
+
+
+    &__icon{
+        height: 1.25rem;
+        align-self: flex-end;
+        margin-bottom: 1.5rem;
+        @include tablet{
+
+        }
+        @include desktop{
+            
+        }
+    }
+    &__title{
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1.25rem;
+        @include tablet{
+
+        }
+        @include desktop{
+            
+        }
+    }
+    &__text{
+        font-size: 0.75rem;
+        line-height: 2;
+        @include tablet{
+            margin-right: 30%;
+
+        }
+        @include desktop{
+            
+        }
+
+    }
+    &__iconbox{
+        width: 100%;
+        display: flex;
+        margin-top: auto;
+        justify-content: space-between;
+        @include tablet{
+            align-self: flex-end;
+            width: 30%;
+
+        }
+        @include desktop{
+            
+        }
+        
+        
+    }
+    &__cancel{
+        @extend .button;
+        font-size: 0.7rem;
+        background-color: transparent;
+        border: 1px solid $border-color;
+        width: 50%; 
+        margin-right: 0.5rem;
+        outline-style: none;
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        @include tablet{
+
+        }
+        @include desktop{
+            
+        }
+    }
+    &__delete{
+        @extend .button;
+        font-size: 0.7rem;
+        color: #fff;
+        margin-left: 0.5rem;
+        background-color: $support-error;
+        width: 50%; 
+        outline: none;
+        border: none;
+        &:visited{
+            color: #fff;
+        }
+        &:hover{
+            cursor: pointer;            
+        }
+        @include tablet{
+
+        }
+        @include desktop{
+            
+        }
+    }
+}

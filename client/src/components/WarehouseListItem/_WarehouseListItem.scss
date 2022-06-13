@@ -1,0 +1,131 @@
+@use '../../partials/mixins' as *;
+
+.warehouse-list-item {
+  list-style: none;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #bdc5d5;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include desktop {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  &__contact-information-container {
+    margin-right: 1.25rem;
+    @include tablet {
+      display: flex;
+      margin: 0;
+      width: 50%;
+    }
+  }
+  &__location-container {
+    @include tablet {
+      display: flex;
+      width: 50%;
+    }
+    @include desktop {
+      width: 32.5rem;
+    }
+  }
+  &__information-container {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      width: 80%;
+    }
+    @include desktop {
+      width: 90%;
+    }
+  }
+  &__label-information-container {
+    margin-bottom: 1rem;
+    @include tablet {
+      margin: 0;
+      width: 50%;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    @include desktop {
+      max-width: 14rem;
+    }
+    &--warehouse {
+      @include desktop {
+        width: 50%;
+      }
+    }
+    &--address {
+      @include tablet {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &--contact-info {
+      @include tablet {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  &__information-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #5c667e;
+    margin-bottom: 0.25rem;
+    display: flex;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__information {
+    font-size: 13px;
+    line-height: 20px;
+    &--icon {
+      height: 1rem;
+      align-self: center;
+    }
+    &--centered {
+      @include tablet {
+        justify-self: center;
+      }
+    }
+    &--address {
+      max-width: 8rem;
+      @include desktop {
+        max-width: none;
+      }
+    }
+  }
+  &__information-link {
+    font-weight: 600;
+    color: #2e66e6;
+    text-decoration: none;
+    display: flex;
+    width: fit-content;
+    &:visited {
+      color: #2e66e6;
+    }
+  }
+  &__buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__button {
+    background: none;
+    border: none;
+    height: 1.5rem;
+    &--edit {
+      @include tablet {
+        margin-left: 1.25rem;
+      }
+    }
+  }
+}

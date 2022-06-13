@@ -1,0 +1,315 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.inventory-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f8f9;
+  position: relative;
+  padding-bottom: 5rem;
+
+  &__container {
+    position: relative;
+    width: calc(100% - 2rem);
+    background-color: #fff;
+    flex-grow: 1;
+    margin: -4rem 0 0;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    // z-index: 1;
+    @include tablet{
+      width: calc(100% - 4rem);
+
+      max-width: 1020px;
+      margin: -5.75rem auto;
+    }
+    @include desktop {
+      flex-grow: 0;
+      width: 1020px;
+      margin: -5.75rem auto;
+    }
+  }
+  &__title-cont {
+    border-bottom: 1px solid #bdc5d5;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  &__title-arrow {
+    margin: 0 0 1rem 1rem;
+    @include tablet {
+      margin-top: 2.7rem;
+    }
+
+    @include desktop {
+      height: 2.5rem;
+      margin-top: 4rem;
+      margin-right: 0.7rem;
+    }
+  }
+  &__title {
+    color: #13182c;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 1.7rem 1rem 1.2rem 0.5rem;
+    @include tablet {
+      font-size: 2rem;
+      margin: 3.5rem 0 1.5rem 0;
+    }
+
+    @include desktop {
+      font-size: 3rem;
+    }
+  }
+
+  &__item-details-item-availability-form {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      justify-content: space-between;
+    }
+  }
+
+  &__item-details,
+  &__item-availability {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+  &__item-details-title,
+  &__item-availability-header {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+
+    @include tablet {
+      font-size: 1.75rem;
+      margin: 0.75rem 0 1.9rem 0;
+    }
+    @include desktop {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__item-name-header,
+  &__desc-header,
+  &__category-header,
+  &__item-availability-status-header,
+  &__quantity-header,
+  &__warehouse-header {
+    font-size: 13px;
+    margin: 0 0 0.25rem;
+    @include tablet {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    @include desktop {
+      font-size: 20px;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__item-name-input,
+  &__category-select,
+  &__quantity-input,
+  &__warehouse-select {
+    height: 2rem;
+    border-radius: 1.25rem;
+    border: 1px solid #bdc5d5;
+
+    @include tablet {
+      height: 2.5rem;
+      width: 287px;
+    }
+
+    @include desktop {
+      height: 2.5rem;
+      width: 430px;
+    }
+  }
+
+  &__item-name-input::placeholder,
+  &__quantity-input::placeholder {
+    padding: 0 0 0 1rem;
+    font-size: 0.7rem;
+
+    @include desktop {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__desc-textarea {
+    height: 6.5rem;
+    border-radius: 1.25rem;
+    border: 1px solid #bdc5d5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+  }
+
+  &__warehouse-select,
+  &__category-select {
+    appearance: none;
+    background-image: url(../../assets/icons/arrow_drop_down-24px.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    padding-left: 1rem;
+    color: grey;
+    font-size: 0.7rem;
+
+    @include tablet {
+      font-size: 0.8rem;
+    }
+
+    @include desktop {
+      font-size: 0.9rem;
+    }
+  }
+  &__desc-textarea::placeholder {
+    padding: 0.5rem 0 0 1rem;
+    font-size: 0.7rem;
+
+    @include tablet {
+      font-size: 0.8rem;
+    }
+
+    @include desktop {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__desc-textarea,
+  &__item-name-input,
+  &__category-select,
+  &__item-availability-status-select,
+  &__quantity-input,
+  &__warehouse-select {
+    margin: 0 0 1rem 0;
+
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__division {
+    border-bottom: 1px solid #bdc5d5;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      border-left: 1px solid #bdc5d5;
+    }
+  }
+
+  &__item-availability {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      align-items: flex-start;
+    }
+  }
+
+  &__status-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-availability-status-select {
+    display: flex;
+    flex-direction: row;
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__out-stock-name,
+  &__in-stock-name {
+    font-size: 0.7rem;
+    margin-left: 0.3rem;
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include desktop {
+      font-size: 0.9rem;
+    }
+  }
+  &__out-stock-btn {
+    margin-left: 5rem;
+  }
+
+  &__in-stock-btn,
+  &__out-stock-btn {
+    @include desktop {
+      margin-top: 0.15rem;
+    }
+  }
+  &__out-stock-name {
+    color: #afafaf;
+  }
+
+  &__btn-cont {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f8f9;
+    padding: 1rem 1.5rem;
+
+    @include tablet {
+      justify-content: flex-end;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__btn-cancel,
+  &__btn-add {
+    border: 1px solid #bdc5d5;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 1.25rem;
+    font-size: 0.7rem;
+
+    @include tablet {
+      height: 2.5rem;
+      font-size: 14px;
+    }
+  }
+
+  &__btn-cancel {
+    margin-right: 1rem;
+    background-color: white;
+
+    @include tablet {
+      width: 5rem;
+    }
+  }
+  &__btn-add {
+    background-color: #2e66e6;
+    color: white;
+    @include tablet {
+      width: 7rem;
+    }
+  }
+
+  &__select {
+    font-size: 0.7rem;
+    color: #afafaf;
+  }
+
+  &__item-details {
+    @include tablet {
+      margin-left: 2rem;
+    }
+  }
+
+  &__item-availability {
+    @include tablet {
+      margin-right: 2rem;
+    }
+  }
+}

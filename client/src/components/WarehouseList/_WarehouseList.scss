@@ -1,0 +1,78 @@
+@use '../../partials/mixins' as *;
+
+.warehouse-list {
+  padding: 0;
+  @include tablet {
+    margin-bottom: 4.375rem;
+  }
+  @include desktop{
+    margin-bottom: 5.9375rem;
+  }
+  &__guide-container {
+    background-color: #f7f8f9;
+  }
+  &__guide {
+    display: none;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    height: 2rem;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    @include desktop {
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+    }
+  }
+  &__guide-item {
+    font-size: 12px;
+    width: 20%;
+    color: #5c667e;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    &--warehouse {
+      @include desktop {
+        width: 25%;
+      }
+    }
+    &--address {
+      @include desktop {
+        width: 25%;
+      }
+    }
+    &--contact-name {
+      @include desktop {
+        width: 20%;
+      }
+    }
+    &--contact-info {
+      width: 25%;
+      @include desktop {
+        width: 20%;
+      }
+    }
+    &--actions {
+      width: 15%;
+      justify-content: flex-end;
+      @include desktop {
+        width: 10%;
+      }
+    }
+  }
+  &__guide-item-button {
+    background: none;
+    border: none;
+    height: 0.75rem;
+    margin-left: 0.55875rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__guide-item-button-icon {
+    height: 0.75rem;
+  }
+}

@@ -1,0 +1,134 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.inventory-details {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f8f9;
+  position: relative;
+  padding-bottom: 15rem;
+  @include tablet{
+    padding-bottom: 35vh;
+
+  }
+  @include desktop{
+    padding-bottom: 50vh;
+  }
+
+  &__container {
+    position: relative;
+    width: calc(100% - 2rem);
+    background-color: #fff;
+    flex-grow: 1;
+    margin: -4rem 0 0;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    // z-index: 1;
+    @include tablet{
+      width: calc(100% - 4rem);
+
+      max-width: 1020px;
+      margin: -5.75rem auto;
+    }
+    @include desktop {
+      flex-grow: 0;
+      width: 1020px;
+      margin: -5.75rem auto;
+    }
+  }
+  &__back-link {
+    padding-right: 0.75rem;
+  }
+  &__title-container {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    border-bottom: 1px solid #bdc5d5;
+  }
+  &__edit-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e66e5;
+    width: fit-content;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-left: auto;
+  }
+  &__info-section-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    @include tablet {
+      display: flex;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+  &__description-category-container {
+    flex-grow: 1;
+    border-right: 1px solid #bdc5d5;
+  }
+  &__status-quantity-warehouse-container {
+    @include tablet {
+      width: 50%;
+      padding-left: 2.5rem;
+    }
+  }
+  &__info-container {
+    @include tablet {
+      width: 50%;
+    }
+  }
+  &__info-label {
+    padding-bottom: 0.25rem;
+    font-size: 0.6875rem;
+    color: #5c667e;
+    font-weight: 600;
+  }
+  &__info {
+    padding-bottom: 1rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    @include tablet {
+      padding-bottom: 2rem;
+    }
+    &--tablet-bottom {
+      padding-bottom: 0.5rem;
+    }
+  }
+  &__status-quantity-container {
+    display: flex;
+  }
+  &__status-info-container {
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    width: fit-content;
+    @include tablet {
+      margin-bottom: 2rem;
+    }
+    &--in-stock {
+      background: rgba(21, 132, 99, 0.07);
+    }
+    &--out-of-stock {
+      background: rgba(201, 69, 21, 0.07);
+    }
+  }
+  &__status-info {
+    font-size: 11px;
+    font-weight: 600;
+    &--in-stock {
+      color: #158463;
+    }
+    &--out-of-stock {
+      color: #c94515;
+    }
+  }
+}

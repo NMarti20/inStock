@@ -1,0 +1,153 @@
+@use '../../partials/mixins' as *;
+
+.inventory-list-item {
+  margin: 2rem 0 0 0;
+  padding: 1rem 1.5rem 0 1.5rem;
+
+  list-style: none;
+  border-bottom: 1px solid #bdc5d5;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 1rem 2rem;
+  }
+
+  &__info-container {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      width: 80%;
+    }
+  }
+  &__label-info-container {
+    max-width: 8rem;
+    margin: 0 0 1rem 0;
+    @include tablet {
+      margin: 0;
+      width: 50%;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    &--category {
+      @include tablet {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &--status {
+      @include tablet {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @include desktop {
+        width: 5rem;
+        margin-right: 4rem;
+      }
+    }
+    &--qty {
+      @include tablet {
+        margin-left: 2rem;
+      }
+      @include desktop {
+        width: 33%;
+      }
+    }
+    &--warehouse {
+      @include tablet {
+        margin-left: 0;
+      }
+      @include desktop {
+        width: 33%;
+      }
+    }
+  }
+  &__first-container {
+    @include tablet {
+      display: flex;
+      width: 50%;
+    }
+  }
+
+  &__second-container {
+    margin: 0 3.2rem 0 0;
+    @include tablet {
+      display: flex;
+      width: 50%;
+      margin: 0;
+    }
+    @include desktop {
+      width: 50%;
+    }
+  }
+  &__info-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #5c667e;
+    margin: 0 0 0.25rem 0;
+
+    @include tablet {
+      display: none;
+    }
+  }
+  &__info {
+    font-size: 13px;
+    line-height: 20px;
+
+    &--warehouse {
+      @include tablet {
+        margin-left: 2rem;
+      }
+    }
+    &--icon {
+      height: 1rem;
+      align-self: center;
+      padding-top: 0.2rem;
+    }
+
+    &--link {
+      font-weight: 600;
+      color: #2e66e6;
+      text-decoration: none;
+    }
+    &--stock {
+      color: red;
+      font-size: 13px;
+      line-height: 20px;
+      background-color: rgba(255, 0, 0, 0.15);
+      border-radius: 13px;
+      padding: 0 0 0 0.55rem;
+      width: 6rem;
+      height: 1.5rem;
+    }
+    &--inStock {
+      color: green;
+      font-size: 13px;
+      line-height: 20px;
+      background-color: rgba(47, 163, 47, 0.15);
+      border-radius: 13px;
+      padding: 0 0 0 0.8rem;
+      height: 1.5rem;
+      @include desktop {
+        width: 5rem;
+        margin-right: 3rem;
+      }
+    }
+  }
+  &__buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 1rem 0;
+  }
+  &__button {
+    background: none;
+    border: none;
+    &--delete {
+      @include tablet {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

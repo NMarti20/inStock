@@ -1,0 +1,119 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+
+.inventory-card{
+    padding: 1rem 1rem;
+    border-bottom: 1px solid $border-color;
+    @include tablet{
+        padding: 1.25rem 2rem;
+        display: flex;
+        width: 100%;
+        
+        
+        
+    }
+    @include desktop{
+        
+    }
+    &__details{
+        height: 6.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @include tablet{
+            flex-direction: row;
+            flex-grow: 1;
+            justify-content: space-between;
+            height: auto;
+          }
+          @include desktop{
+    
+          }
+    }
+    &__link{
+        display: flex;
+
+        &-icon{
+            height: 0.95rem;
+        }
+    }
+
+    &__label-info{
+        
+        width: calc(50% - 0.75rem);
+        height: 3.25rem;
+        @include tablet{
+            width:20%;   
+            height: auto;   
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  
+          }
+          @include desktop{
+    
+          }
+    }
+    &__label{
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;       
+        font-size: 0.525rem;
+        font-weight: 600;
+        color: #5c667e;
+        margin-bottom: 0.5rem;
+        @include tablet {
+          display: none;
+        }
+    }
+    &__content{
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
+        @include tablet {
+            width: 90%;
+            margin-bottom: 0;
+        }
+    }
+    &__name{
+        font-size: 0.7rem;
+        margin-bottom: 1rem;
+        margin-right: 0.25rem;
+        font-weight: 500;
+        color: $primary-interact;
+        @include tablet{
+            font-size: 0.85rem;
+            margin-bottom: 0rem;
+    
+    
+          }
+          @include desktop{
+    
+          }
+
+    }
+    &__status{
+        font-size: 0.7rem;
+        width: 70%;
+        text-align: center;
+        background-color: rgba(201, 69, 21, 0.1);
+        color: $support-error;
+        padding: 0.25rem;
+        border-radius: 116px;
+
+    }
+    &__icon-box{
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            width: 13%;
+            padding-left: 2.5rem;
+        }
+    }
+    &__icon{
+        height: 1.25rem;
+        @include tablet{
+            height: 1.5rem;
+
+        }
+    }
+
+}
